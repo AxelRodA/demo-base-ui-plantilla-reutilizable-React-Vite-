@@ -22,7 +22,7 @@ export default function FormDemo() {
     try {
       await api('/echo', { method: 'POST', body: JSON.stringify({ name, email }) })
       push('Guardado')
-    } catch {
+    } catch (err) {
       push('Error al guardar')
     }
   }
