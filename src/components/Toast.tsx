@@ -18,9 +18,12 @@ export default function ToastProvider({ children }: PropsWithChildren) {
   return (
     <ToastCtx.Provider value={value}>
       {children}
-      <div className="fixed bottom-4 right-4 space-y-2">
+      <div className="fixed bottom-6 right-6 space-y-3">
         {items.map((item) => (
-          <div key={item.id} className="rounded bg-slate-800 px-3 py-2 text-white shadow">
+          <div
+            key={item.id}
+            className="flex items-center gap-3 rounded-2xl border border-slate-800/40 bg-slate-900/80 px-4 py-3 text-sm font-medium text-white shadow-lg shadow-slate-950/30 backdrop-blur"
+          >
             {item.text}
           </div>
         ))}
